@@ -156,7 +156,7 @@ export default function Caymatik() {
     
     if (currentUserData) {
       try {
-        const userDocRef = doc(db, 'artifacts', appId, 'public', 'data', 'caymatik_users', currentUserData.id);
+        const userDocRef = doc(db, 'caymatik_users', currentUserData.id);
         
         // Hem bakiyeyi hem de toplam satın alma istatistiğini güncelle
         await updateDoc(userDocRef, {
